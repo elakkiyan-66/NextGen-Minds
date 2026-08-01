@@ -1270,6 +1270,28 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     navigateTo('section-login');
   }
+  // ==========================================================================
+// 10. INITIALIZATION & EVENT LISTENERS
+// ==========================================================================
+document.addEventListener('DOMContentLoaded', () => {
+  // Bind login button/form if present
+  const loginBtn = document.querySelector('#section-login button');
+  if (loginBtn) {
+    loginBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.handleLogin();
+    });
+  }
+
+  // Alternatively bind form submission directly
+  const loginForm = document.querySelector('#section-login form');
+  if (loginForm) {
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      window.handleLogin();
+    });
+  }
+});
 
   // Setup language translation defaults
   translatePage();
