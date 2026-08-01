@@ -1,0 +1,16 @@
+# Database & SQLite files
+*.db
+*.sqlite
+*.sqlite3
+farmfleet.db
+
+# Environment & Sensitive configs
+.env
+.env.local
+config.local.php
+
+# Operating System & IDE cache
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
