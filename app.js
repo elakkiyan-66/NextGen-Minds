@@ -506,7 +506,9 @@ function fetchBookingsCount() {
   .then(data => {
     if (data.rentals || data.purchases) {
       const total = (data.rentals ? data.rentals.length : 0) + (data.purchases ? data.purchases.length : 0);
-      document.getElementById('farmer-bookings-badge').textContent = total;
+     const targetElement = document.getElementById('someElementId');
+if (targetElement) {
+    targetElement.textContent = data.value;
     }
   });
 }
